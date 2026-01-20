@@ -403,29 +403,29 @@ iii. function
 // 3 ways to create OBJECT
 
   //* 1. Object Literals
-    const obj1 = {
-      id: 1,
-      fname: "John",
-    };
+//     const obj1 = {
+//       id: 1,
+//       fname: "John",
+//     };
 
-    console.log(obj1);
+//     console.log(obj1);
 
-  //* 2. Object Constructor
-  const obj2 = new Object({
-    id : 2,
-    fname : "Jenne",
-  });
-  console.log(obj2);
+//   //* 2. Object Constructor
+//   const obj2 = new Object({
+//     id : 2,
+//     fname : "Jenne",
+//   });
+//   console.log(obj2);
 
-  //* 3. Constructor Function
+//   //* 3. Constructor Function
 
-  class Student {
-  constructor(id, fname) {
-    this.id = id;
-    this.fname = fname;
+//   class Student {
+//   constructor(id, fname) {
+//     this.id = id;
+//     this.fname = fname;
 
-  }
-}
+//   }
+// }
  
 //same as above
   // function Student(id,fname){
@@ -434,13 +434,109 @@ iii. function
 
   // }
 
-  let s1 = new Student(1, "James");
+//   let s1 = new Student(1, "James");
 
-  console.log(s1);
+//   console.log(s1);
 
-  let s2 = new Student(3, "Robb");
+//   let s2 = new Student(3, "Robb");
 
-  console.log(s2);
+//   console.log(s2);
+
+//   //! CRUD WITH OBJECT
+
+
+//   //!  CREATE
+//   const obj = {
+//     id : 1,
+//     fname : "John",
+//     lname : "Doe",
+//     age : 25,
+//     company : "NA",
+//   };
+
+//   console.log(obj);
+
+//   //!  READ
+//   // there are two ways to read
+
+//   // 1. Using dot operator
+
+//   console.log(obj.fname);
+
+//   // 2. using Square Bracket
+
+//   let x = "lname";
+  
+//   console.log(obj["age"]);    //25
+
+//   console.log(obj[x]);    //Doe
+
+
+//   //* forLoop
+
+//   let arr = [10,30,50,70,90];
+
+//   for(let i = 0; i < arr.length; i++){
+//     console.log(arr[i]);
+//   }
+
+//   //* for in
+
+//   for(let i in obj){
+//     console.log(i, obj[i]);
+//   }
+
+//   //! UPDATE
+
+//   obj.company = "TCS";
+
+//   console.log(obj);
+
+//   //* ADD NEW KEY
+
+//   obj.salary = 6000;
+
+//   console.log(obj);
+
+// //! DELETE
+
+// delete obj.salary
+// console.log(obj);
+
+
+//! ONJECT METHODS
+
+let obj = {
+  id : 1,
+  ename : "John Doe",
+};
+
+//* 1. object.keys()
+
+let keys = Object.keys(obj);
+console.log(keys);   //["id", "ename"]
+
+//* 2. object.values()
+
+let values = Object.values(obj);
+console.log(values);    // [1, "John Doe"]
+
+//* 3. object.entries()
+
+let keyAndValue = Object.entries(obj)
+console.log(keyAndValue);   //[ ["id", 1], ["ename", "John Doe"]]
+
+//* 4. object.fromEntries()
+
+let newObj = Object.fromEntries(keyAndValue);
+console.log(newObj);    // {id: 1, ename: 'John Doe'}
+
+
+
+
+
+
+
 
 
 
